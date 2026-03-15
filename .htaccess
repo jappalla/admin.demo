@@ -1,3 +1,23 @@
+# === Protezione file sensibili ===
+Options -Indexes
+
+<Files .env>
+    Require all denied
+</Files>
+<Files .env.example>
+    Require all denied
+</Files>
+<Files .gitignore>
+    Require all denied
+</Files>
+
+# Blocco accesso diretto a directory sensibili
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(vendor|config|database|storage|app)/ - [F,L]
+</IfModule>
+
+# === Cache headers ===
 <IfModule mod_headers.c>
   <FilesMatch "\.html$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
