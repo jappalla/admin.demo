@@ -1,10 +1,14 @@
 <!doctype html>
 <?php
+// Generate CSP nonce for inline scripts
+$csp_nonce = base64_encode(random_bytes(16));
+
 // Content-Security-Policy header
-header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$csp_nonce}'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
 header("X-Content-Type-Options: nosniff");
 header("X-Frame-Options: DENY");
 header("Referrer-Policy: strict-origin-when-cross-origin");
+header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
 ?>
 <html lang="it">
 
@@ -204,7 +208,7 @@ header("Referrer-Policy: strict-origin-when-cross-origin");
             </div>
         </div>
 
-        <script>
+        <script nonce="<?php echo htmlspecialchars($csp_nonce, ENT_QUOTES, 'UTF-8'); ?>">
             (function() {
                 var btn = document.getElementById('mobile-menu-btn');
                 var menu = document.getElementById('mobile-menu');
