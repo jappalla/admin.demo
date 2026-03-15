@@ -47,6 +47,8 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
     <?php $ogImage = $scheme . '://' . $host . asset_url('assets/img/tony_2013_-600x754.webp'); ?>
     <meta property="og:image" content="<?php echo e($ogImage); ?>">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo e($resolvedTitle); ?>">
+    <meta name="twitter:description" content="<?php echo e($resolvedDescription); ?>">
     <meta name="twitter:image" content="<?php echo e($ogImage); ?>">
     <link rel="icon" type="image/svg+xml" href="<?php echo e(asset_url('assets/img/favicon.svg')); ?>">
 
