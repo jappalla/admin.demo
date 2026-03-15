@@ -1,69 +1,39 @@
-# deskapp
+# Developer Portal — testscript.info
 
-DeskApp Admin is a free to use Bootstrap 4 admin template. This template uses the default Bootstrap 4 styles along with a variety of powerful jQuery plugins and tools to create a powerful framework for creating admin panels or back-end dashboards.
+Portfolio MVC framework per il developer portal di testscript.info.
 
-Theme uses several libraries for charts, calendar, text forms, date range, upload area, form autocomplete, range slider, progress bars, notifications and much more.
+## Stack
 
-We would love to see how you use this awesome admin template. You can notify us about your site. Once the list will grown long enough we will write a post similar to this to showcase the best examples.
+- **PHP 8.2+** — MVC custom (Controllers, Repositories, Services, Support)
+- **TailwindCSS v4** — Compilato con `@tailwindcss/cli`
+- **MySQL/MariaDB** — Migrations in `database/migrations/`
 
-# Quick start
-Several quick start options are available:
-* Clone the repo: git clone https://github.com/jappalla/admin.demo.git
-* Install with npm: 
-  `npm install deskapp`
+## Struttura
 
-## Built With
-* Bootstrap 4
-* Bootstrap Select
-* Bootstrap Tagsinput
-* Bootstrap Touchspin
-* Bootstrap-wysihtml5
-* Moment Js
-* Clipboard Js
-* Air Datepicker
-* Cropperjs
-* Datatables
-* Dropzone
-* Fancybox 3
-* Fullcalendar
-* Highcharts
-* Ion-rangeslider
-* jQuery Ascolorpicker
-* jQuery Asgradient
-* jQuery Knob
-* jQuery Steps
-* Jvectormap
-* Mcustom scrollbar
-* Plyr
-* Select2
-* Slick Slider
-* Sweetalert2
-* Switchery
-* Timedropper
+```
+app/
+  Controllers/   — Route handlers
+  Repositories/  — Data access layer
+  Services/      — Business logic
+  Support/       — Helpers (Env, Database, Session, Csrf, etc.)
+  Views/         — PHP templates
+config/          — App & database configuration
+database/        — Migrations, seeders
+partials/        — Shared header/footer
+public/          — Web entry point
+assets/          — CSS, JS
+router.php       — Route definitions
+```
 
+## Setup locale
 
+```bash
+cp .env.example .env     # Configura credenziali DB
+composer install          # (se vendor/ necessario)
+npm install               # TailwindCSS
+npx @tailwindcss/cli -i assets/css/tailwind.css -o assets/css/dist.css
+```
 
-## Bugs Reports
-Have a bug or a feature request? Please open a new issue.
+## Deploy
 
-# MIT License
-
-Copyright (c) 2018 DeskApp
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+SCP su Hostinger (vedi `/deploy/DEPLOY.md` nel repo principale).

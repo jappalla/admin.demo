@@ -99,9 +99,9 @@ $projects = [
 $colorMap = [
     'accent-blue'   => ['border' => 'border-blue-400/20',  'bg' => 'bg-blue-400/10',  'text' => 'text-blue-300',  'ring' => 'ring-blue-400/20'],
     'accent-violet'  => ['border' => 'border-violet-400/20', 'bg' => 'bg-violet-400/10', 'text' => 'text-violet-300', 'ring' => 'ring-violet-400/20'],
-    'emerald'         => ['border' => 'border-emerald-400/20','bg' => 'bg-emerald-400/10','text' => 'text-emerald-300','ring' => 'ring-emerald-400/20'],
+    'emerald'         => ['border' => 'border-emerald-400/20', 'bg' => 'bg-emerald-400/10', 'text' => 'text-emerald-300', 'ring' => 'ring-emerald-400/20'],
     'sky'             => ['border' => 'border-sky-400/20',   'bg' => 'bg-sky-400/10',   'text' => 'text-sky-300',   'ring' => 'ring-sky-400/20'],
-    'fuchsia'         => ['border' => 'border-fuchsia-400/20','bg' => 'bg-fuchsia-400/10','text' => 'text-fuchsia-300','ring' => 'ring-fuchsia-400/20'],
+    'fuchsia'         => ['border' => 'border-fuchsia-400/20', 'bg' => 'bg-fuchsia-400/10', 'text' => 'text-fuchsia-300', 'ring' => 'ring-fuchsia-400/20'],
     'amber'           => ['border' => 'border-amber-400/20', 'bg' => 'bg-amber-400/10', 'text' => 'text-amber-300', 'ring' => 'ring-amber-400/20'],
 ];
 
@@ -187,16 +187,23 @@ $skillIcons = [
                         <a class="button primary group inline-flex items-center justify-center gap-2 rounded-2xl bg-accent-blue px-6 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-accent-blue/25 transition hover:bg-blue-400 hover:shadow-accent-blue/40"
                             href="#progetti">
                             <span>Vedi Progetti</span>
-                            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.3 17.3a1 1 0 0 1-1.4-1.4L15.17 12.5H4a1 1 0 1 1 0-2h11.17l-3.3-3.3a1 1 0 0 1 1.42-1.4l5 5a1 1 0 0 1 0 1.4l-5 5z"/></svg>
+                            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M13.3 17.3a1 1 0 0 1-1.4-1.4L15.17 12.5H4a1 1 0 1 1 0-2h11.17l-3.3-3.3a1 1 0 0 1 1.42-1.4l5 5a1 1 0 0 1 0 1.4l-5 5z" />
+                            </svg>
                         </a>
                         <a class="button secondary inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
                             href="<?php echo e(route_url('cv/export')); ?>">
-                            <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.42L11 12.59V4a1 1 0 0 1 1-1z"/><path fill="currentColor" d="M5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z"/></svg>
+                            <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.42L11 12.59V4a1 1 0 0 1 1-1z" />
+                                <path fill="currentColor" d="M5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z" />
+                            </svg>
                             <span>Scarica CV</span>
                         </a>
                         <a class="button secondary inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
                             href="#contatti">
-                            <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.2l7.4 6.17a1 1 0 0 0 1.2 0L20 8.2V18H4z"/></svg>
+                            <svg class="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.2l7.4 6.17a1 1 0 0 0 1.2 0L20 8.2V18H4z" />
+                            </svg>
                             <span>Contatti</span>
                         </a>
                     </div>
@@ -232,7 +239,9 @@ $skillIcons = [
                                 <a class="inline-flex items-center justify-center gap-1.5 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold text-white/80 hover:bg-white/10 hover:text-white transition"
                                     href="<?php echo e($contactLinkedinHref); ?>" target="_blank"
                                     rel="noopener noreferrer" aria-label="Apri LinkedIn" title="Apri LinkedIn">
-                                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 8.6H3.2V21h3.4V8.6zM4.9 3A2 2 0 1 0 5 7a2 2 0 0 0-.1-4zM20.8 13.9c0-3.7-2-5.4-4.7-5.4-2.2 0-3.1 1.2-3.6 2v-1.8H9.1V21h3.4v-6.1c0-1.6.3-3.2 2.3-3.2 2 0 2 1.9 2 3.3V21h3.4v-7.1z"/></svg>
+                                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill="currentColor" d="M6.6 8.6H3.2V21h3.4V8.6zM4.9 3A2 2 0 1 0 5 7a2 2 0 0 0-.1-4zM20.8 13.9c0-3.7-2-5.4-4.7-5.4-2.2 0-3.1 1.2-3.6 2v-1.8H9.1V21h3.4v-6.1c0-1.6.3-3.2 2.3-3.2 2 0 2 1.9 2 3.3V21h3.4v-7.1z" />
+                                    </svg>
                                     LinkedIn
                                 </a>
                             </figcaption>
@@ -267,7 +276,9 @@ $skillIcons = [
             <div class="mt-5 grid gap-3 sm:grid-cols-3">
                 <div class="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
                     <span class="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-accent-blue/15 text-accent-blue ring-1 ring-accent-blue/20">
-                        <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <svg class="h-4 w-4" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
                     </span>
                     <div>
                         <p class="text-sm font-bold text-white">Architettura Full-Stack</p>
@@ -276,7 +287,9 @@ $skillIcons = [
                 </div>
                 <div class="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
                     <span class="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-emerald-400/15 text-emerald-300 ring-1 ring-emerald-300/20">
-                        <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <svg class="h-4 w-4" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg>
                     </span>
                     <div>
                         <p class="text-sm font-bold text-white">Qualità &amp; Testing</p>
@@ -285,7 +298,9 @@ $skillIcons = [
                 </div>
                 <div class="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
                     <span class="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-sky-400/15 text-sky-300 ring-1 ring-sky-300/20">
-                        <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        <svg class="h-4 w-4" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
                     </span>
                     <div>
                         <p class="text-sm font-bold text-white">Multilingua &amp; SEO</p>
@@ -315,52 +330,61 @@ $skillIcons = [
                 <?php foreach ($projects as $pi => $project):
                     $pc = $colorMap[$project['color']] ?? $colorMap['accent-blue'];
                 ?>
-                <article class="group relative flex flex-col rounded-2xl border <?php echo $pc['border']; ?> bg-base-900/55 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30 overflow-hidden">
-                    <!-- Top accent bar -->
-                    <div class="h-1 w-full <?php echo $pc['bg']; ?>"></div>
-                    <div class="flex flex-1 flex-col p-5">
-                        <!-- Header -->
-                        <div class="flex items-start justify-between gap-2">
-                            <div class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl <?php echo $pc['bg']; ?> <?php echo $pc['text']; ?> ring-1 <?php echo $pc['ring']; ?>">
-                                <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/></svg>
+                    <article class="group relative flex flex-col rounded-2xl border <?php echo $pc['border']; ?> bg-base-900/55 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30 overflow-hidden">
+                        <!-- Top accent bar -->
+                        <div class="h-1 w-full <?php echo $pc['bg']; ?>"></div>
+                        <div class="flex flex-1 flex-col p-5">
+                            <!-- Header -->
+                            <div class="flex items-start justify-between gap-2">
+                                <div class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl <?php echo $pc['bg']; ?> <?php echo $pc['text']; ?> ring-1 <?php echo $pc['ring']; ?>">
+                                    <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill="currentColor" d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z" />
+                                    </svg>
+                                </div>
+                                <span class="text-[10px] font-semibold uppercase tracking-wider <?php echo $pc['text']; ?> opacity-60">#<?php echo $pi + 1; ?></span>
                             </div>
-                            <span class="text-[10px] font-semibold uppercase tracking-wider <?php echo $pc['text']; ?> opacity-60">#<?php echo $pi + 1; ?></span>
-                        </div>
-                        <h3 class="mt-3 text-base font-bold text-white group-hover:<?php echo $pc['text']; ?> transition"><?php echo e($project['name']); ?></h3>
-                        <p class="mt-2 flex-1 text-xs text-white/60 leading-relaxed"><?php echo e($project['description']); ?></p>
+                            <h3 class="mt-3 text-base font-bold text-white group-hover:<?php echo $pc['text']; ?> transition"><?php echo e($project['name']); ?></h3>
+                            <p class="mt-2 flex-1 text-xs text-white/60 leading-relaxed"><?php echo e($project['description']); ?></p>
 
-                        <!-- Tech stack -->
-                        <div class="mt-4 flex flex-wrap gap-1.5">
-                            <?php foreach ($project['tech'] as $tech): ?>
-                                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-semibold text-white/70"><?php echo e($tech); ?></span>
-                            <?php endforeach; ?>
-                        </div>
+                            <!-- Tech stack -->
+                            <div class="mt-4 flex flex-wrap gap-1.5">
+                                <?php foreach ($project['tech'] as $tech): ?>
+                                    <span class="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-semibold text-white/70"><?php echo e($tech); ?></span>
+                                <?php endforeach; ?>
+                            </div>
 
-                        <!-- Metrics -->
-                        <div class="mt-3 flex flex-wrap gap-2">
-                            <?php foreach ($project['metrics'] as $metric): ?>
-                                <span class="inline-flex items-center gap-1 text-[10px] font-semibold <?php echo $pc['text']; ?>">
-                                    <svg class="h-3 w-3" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                                    <?php echo e($metric); ?>
-                                </span>
-                            <?php endforeach; ?>
-                        </div>
+                            <!-- Metrics -->
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <?php foreach ($project['metrics'] as $metric): ?>
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-semibold <?php echo $pc['text']; ?>">
+                                        <svg class="h-3 w-3" viewBox="0 0 24 24">
+                                            <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                        </svg>
+                                        <?php echo e($metric); ?>
+                                    </span>
+                                <?php endforeach; ?>
+                            </div>
 
-                        <!-- Links -->
-                        <div class="mt-4 flex items-center gap-2 border-t border-white/10 pt-4">
-                            <a class="inline-flex items-center gap-1.5 rounded-xl bg-white/5 px-3 py-1.5 text-xs font-semibold text-white/70 transition hover:bg-white/10 hover:text-white"
-                                href="<?php echo e($project['url']); ?>" target="_blank" rel="noopener noreferrer">
-                                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path fill="currentColor" d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>
-                                Live
-                            </a>
-                            <a class="inline-flex items-center gap-1.5 rounded-xl bg-white/5 px-3 py-1.5 text-xs font-semibold text-white/70 transition hover:bg-white/10 hover:text-white"
-                                href="<?php echo e($project['github']); ?>" target="_blank" rel="noopener noreferrer">
-                                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                                GitHub
-                            </a>
+                            <!-- Links -->
+                            <div class="mt-4 flex items-center gap-2 border-t border-white/10 pt-4">
+                                <a class="inline-flex items-center gap-1.5 rounded-xl bg-white/5 px-3 py-1.5 text-xs font-semibold text-white/70 transition hover:bg-white/10 hover:text-white"
+                                    href="<?php echo e($project['url']); ?>" target="_blank" rel="noopener noreferrer">
+                                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path fill="currentColor" d="M5 5h6v2H7v10h10v-4h2v6H5V5z" />
+                                    </svg>
+                                    Live
+                                </a>
+                                <a class="inline-flex items-center gap-1.5 rounded-xl bg-white/5 px-3 py-1.5 text-xs font-semibold text-white/70 transition hover:bg-white/10 hover:text-white"
+                                    href="<?php echo e($project['github']); ?>" target="_blank" rel="noopener noreferrer">
+                                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -421,7 +445,7 @@ $skillIcons = [
                                     <?php if ($period !== ''): ?>
                                         <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/70">
                                             <?php echo e($period); ?>
-                                </span>
+                                        </span>
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -483,7 +507,9 @@ $skillIcons = [
                                                     <svg class="h-3.5 w-3.5 opacity-70" viewBox="0 0 24 24" aria-hidden="true"><?php echo $skillIcons[$skillName]; ?></svg>
                                                 <?php endif; ?>
                                                 <?php echo e($skillName); ?>
-                                                <svg class="h-3 w-3 opacity-50" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/></svg>
+                                                <svg class="h-3 w-3 opacity-50" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                                </svg>
                                             </a>
                                         <?php else: ?>
                                             <span class="inline-flex items-center gap-1.5 rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold <?php echo $cc[3]; ?>">
@@ -556,7 +582,9 @@ $skillIcons = [
                 <div class="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-5 transition hover:-translate-y-0.5">
                     <div class="flex items-center gap-3">
                         <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-indigo-400/15 text-indigo-300 ring-1 ring-indigo-400/20">
-                            <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                            <svg class="h-5 w-5" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+                            </svg>
                         </span>
                         <div>
                             <p class="text-sm font-bold text-white">Formazione Continua</p>
@@ -568,7 +596,9 @@ $skillIcons = [
                 <div class="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-5 transition hover:-translate-y-0.5">
                     <div class="flex items-center gap-3">
                         <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-indigo-400/15 text-indigo-300 ring-1 ring-indigo-400/20">
-                            <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="currentColor" d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                            <svg class="h-5 w-5" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
+                            </svg>
                         </span>
                         <div>
                             <p class="text-sm font-bold text-white">Esperienza Pratica</p>
@@ -580,7 +610,9 @@ $skillIcons = [
                 <div class="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-5 transition hover:-translate-y-0.5">
                     <div class="flex items-center gap-3">
                         <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-indigo-400/15 text-indigo-300 ring-1 ring-indigo-400/20">
-                            <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="currentColor" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                            <svg class="h-5 w-5" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
                         </span>
                         <div>
                             <p class="text-sm font-bold text-white">Open Source</p>
@@ -592,7 +624,9 @@ $skillIcons = [
                 <div class="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-5 transition hover:-translate-y-0.5">
                     <div class="flex items-center gap-3">
                         <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-indigo-400/15 text-indigo-300 ring-1 ring-indigo-400/20">
-                            <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                            <svg class="h-5 w-5" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                            </svg>
                         </span>
                         <div>
                             <p class="text-sm font-bold text-white">Security &amp; Best Practice</p>
@@ -622,28 +656,36 @@ $skillIcons = [
                 <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <div class="text-center">
                         <div class="mx-auto mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-400/10 text-blue-300 ring-1 ring-blue-400/20">
-                            <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill="currentColor" d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.572 0z"/></svg>
+                            <svg class="h-6 w-6" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.572 0z" />
+                            </svg>
                         </div>
                         <p class="text-xs font-bold text-white">Frontend</p>
                         <p class="mt-1 text-[10px] text-white/50">React 19 &bull; TypeScript &bull; TailwindCSS &bull; Vite</p>
                     </div>
                     <div class="text-center">
                         <div class="mx-auto mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-400/10 text-violet-300 ring-1 ring-violet-400/20">
-                            <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill="currentColor" d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312z"/></svg>
+                            <svg class="h-6 w-6" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312z" />
+                            </svg>
                         </div>
                         <p class="text-xs font-bold text-white">Backend</p>
                         <p class="mt-1 text-[10px] text-white/50">PHP 8 &bull; Slim 4 &bull; JWT &bull; PDO</p>
                     </div>
                     <div class="text-center">
                         <div class="mx-auto mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-400/20">
-                            <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.59 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zM6 17v-2.42c1.23.8 3.39 1.42 6 1.42s4.77-.62 6-1.42V17c0 .5-2.13 2-6 2s-6-1.5-6-2zm0-5v-2.42c1.23.8 3.39 1.42 6 1.42s4.77-.62 6-1.42V12c0 .5-2.13 2-6 2s-6-1.5-6-2z"/></svg>
+                            <svg class="h-6 w-6" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.59 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zM6 17v-2.42c1.23.8 3.39 1.42 6 1.42s4.77-.62 6-1.42V17c0 .5-2.13 2-6 2s-6-1.5-6-2zm0-5v-2.42c1.23.8 3.39 1.42 6 1.42s4.77-.62 6-1.42V12c0 .5-2.13 2-6 2s-6-1.5-6-2z" />
+                            </svg>
                         </div>
                         <p class="text-xs font-bold text-white">Database</p>
                         <p class="mt-1 text-[10px] text-white/50">MySQL &bull; SQLite &bull; PDO &bull; Migrations</p>
                     </div>
                     <div class="text-center">
                         <div class="mx-auto mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400/10 text-amber-300 ring-1 ring-amber-400/20">
-                            <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill="currentColor" d="M22.67 12l-4.49-4.47a1 1 0 0 0-1.41 0 1 1 0 0 0 0 1.41L20.59 12l-3.8 3.47a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0L22.67 12zM1.33 12l4.49 4.47a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41L3.41 12l3.8-3.47a1 1 0 0 0 0-1.41 1 1 0 0 0-1.41 0L1.33 12zm6.18 6.16l3.1-12.54a1 1 0 0 1 1.22-.73 1 1 0 0 1 .73 1.22l-3.1 12.54a1 1 0 0 1-1.22.73 1 1 0 0 1-.73-1.22z"/></svg>
+                            <svg class="h-6 w-6" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M22.67 12l-4.49-4.47a1 1 0 0 0-1.41 0 1 1 0 0 0 0 1.41L20.59 12l-3.8 3.47a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0L22.67 12zM1.33 12l4.49 4.47a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41L3.41 12l3.8-3.47a1 1 0 0 0 0-1.41 1 1 0 0 0-1.41 0L1.33 12zm6.18 6.16l3.1-12.54a1 1 0 0 1 1.22-.73 1 1 0 0 1 .73 1.22l-3.1 12.54a1 1 0 0 1-1.22.73 1 1 0 0 1-.73-1.22z" />
+                            </svg>
                         </div>
                         <p class="text-xs font-bold text-white">DevOps &amp; Test</p>
                         <p class="mt-1 text-[10px] text-white/50">Vitest &bull; PHPUnit &bull; Playwright &bull; Git</p>
@@ -653,11 +695,17 @@ $skillIcons = [
                 <!-- Architecture flow -->
                 <div class="mt-6 flex items-center justify-center gap-2 text-xs text-white/40">
                     <span class="rounded-lg bg-blue-400/10 px-2 py-1 text-blue-300 font-semibold">React SPA</span>
-                    <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+                    <svg class="h-4 w-4" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                    </svg>
                     <span class="rounded-lg bg-violet-400/10 px-2 py-1 text-violet-300 font-semibold">REST API</span>
-                    <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+                    <svg class="h-4 w-4" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                    </svg>
                     <span class="rounded-lg bg-emerald-400/10 px-2 py-1 text-emerald-300 font-semibold">MySQL</span>
-                    <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+                    <svg class="h-4 w-4" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                    </svg>
                     <span class="rounded-lg bg-amber-400/10 px-2 py-1 text-amber-300 font-semibold">CI/CD</span>
                 </div>
             </div>
@@ -683,7 +731,9 @@ $skillIcons = [
                     <div class="rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-white/20">
                         <div class="flex items-center gap-3">
                             <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
-                                <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.2l7.4 6.17a1 1 0 0 0 1.2 0L20 8.2V18H4z"/></svg>
+                                <svg class="h-4 w-4" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.2l7.4 6.17a1 1 0 0 0 1.2 0L20 8.2V18H4z" />
+                                </svg>
                             </span>
                             <div>
                                 <p class="m-0 text-xs uppercase tracking-wide text-white/40">Email</p>
@@ -698,7 +748,9 @@ $skillIcons = [
                         <div class="rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-white/20">
                             <div class="flex items-center gap-3">
                                 <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
-                                    <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                    <svg class="h-4 w-4" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                    </svg>
                                 </span>
                                 <div>
                                     <p class="m-0 text-xs uppercase tracking-wide text-white/40">Telefono</p>
@@ -713,7 +765,9 @@ $skillIcons = [
                     <div class="rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-white/20">
                         <div class="flex items-center gap-3">
                             <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
-                                <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 8.6H3.2V21h3.4V8.6zM4.9 3A2 2 0 1 0 5 7a2 2 0 0 0-.1-4zM20.8 13.9c0-3.7-2-5.4-4.7-5.4-2.2 0-3.1 1.2-3.6 2v-1.8H9.1V21h3.4v-6.1c0-1.6.3-3.2 2.3-3.2 2 0 2 1.9 2 3.3V21h3.4v-7.1z"/></svg>
+                                <svg class="h-4 w-4" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M6.6 8.6H3.2V21h3.4V8.6zM4.9 3A2 2 0 1 0 5 7a2 2 0 0 0-.1-4zM20.8 13.9c0-3.7-2-5.4-4.7-5.4-2.2 0-3.1 1.2-3.6 2v-1.8H9.1V21h3.4v-6.1c0-1.6.3-3.2 2.3-3.2 2 0 2 1.9 2 3.3V21h3.4v-7.1z" />
+                                </svg>
                             </span>
                             <div>
                                 <p class="m-0 text-xs uppercase tracking-wide text-white/40">LinkedIn</p>
@@ -729,7 +783,9 @@ $skillIcons = [
                     <div class="rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-white/20">
                         <div class="flex items-center gap-3">
                             <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
-                                <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                <svg class="h-4 w-4" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg>
                             </span>
                             <div>
                                 <p class="m-0 text-xs uppercase tracking-wide text-white/40">GitHub</p>
@@ -785,7 +841,9 @@ $skillIcons = [
                         </label>
                         <button class="button primary group inline-flex items-center justify-center gap-2" type="submit">
                             <span>Invia Messaggio</span>
-                            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24"><path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                            </svg>
                         </button>
                     </form>
                 </div>

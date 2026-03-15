@@ -1,9 +1,18 @@
-/bower_components/
+# Dependencies
 /node_modules/
-.sass-cache/
+/vendor/
 
 # Environment files (contengono credenziali)
 .env
 .env.*
 !.env.example
-.npmignore
+
+# Build output
+assets/css/dist.css
+
+# Storage runtime files
+storage/rate_limits/
+
+# IDE
+.idea/
+.vscode/
