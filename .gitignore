@@ -1,4 +1,9 @@
 /bower_components/
 /node_modules/
 .sass-cache/
+
+# Environment files (contengono credenziali)
+.env
+.env.*
+!.env.example
 .npmignore
