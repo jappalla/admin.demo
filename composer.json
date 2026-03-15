@@ -1,0 +1,17 @@
+{
+    "name": "jappalla/developer-portal",
+    "description": "Developer portal - Antonio Trapasso CV",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "files": [
+            "config/helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
