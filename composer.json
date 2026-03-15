@@ -6,11 +6,7 @@
         "php": ">=8.1",
         "phpmailer/phpmailer": "^6.9"
     },
-    "autoload": {
-        "files": [
-            "config/helpers.php"
-        ]
-    },
+    "autoload": {},
     "config": {
         "optimize-autoloader": true
     }
