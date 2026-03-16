@@ -4,7 +4,7 @@
 $csp_nonce = base64_encode(random_bytes(16));
 
 // Content-Security-Policy header
-header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$csp_nonce}'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$csp_nonce}' https://testscript.info; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://testscript.info; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
 header("X-Content-Type-Options: nosniff");
 header("X-Frame-Options: DENY");
 header("Referrer-Policy: strict-origin-when-cross-origin");
@@ -164,6 +164,12 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
                                 Portfolio
                             </a>
                         </li>
+                        <li>
+                            <a href="https://testscript.info/demo/"
+                                class="rounded-2xl px-4 py-2 text-sm font-semibold text-white/80 hover:text-white hover:bg-white/5 transition">
+                                Demo
+                            </a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -205,6 +211,10 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
                     <a href="https://testscript.info/app"
                         class="block rounded-2xl px-4 py-3 text-sm font-semibold text-white/80 hover:text-white hover:bg-white/10 transition">
                         Portfolio
+                    </a>
+                    <a href="https://testscript.info/demo/"
+                        class="block rounded-2xl px-4 py-3 text-sm font-semibold text-white/80 hover:text-white hover:bg-white/10 transition">
+                        Demo
                     </a>
                 </div>
             </div>

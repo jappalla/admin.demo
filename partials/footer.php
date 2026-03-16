@@ -121,6 +121,11 @@ $encodedShareText = rawurlencode($shareText);
                     href="https://testscript.info/app">
                     Portfolio
                 </a>
+                <span class="mx-2 text-white/20">•</span>
+                <a class="hover:text-white transition"
+                    href="https://testscript.info/demo/">
+                    Demo
+                </a>
             </p>
         </div>
     </div>
@@ -133,6 +138,8 @@ $encodedShareText = rawurlencode($shareText);
     </style>
 </footer>
 
+<link rel="stylesheet" href="https://testscript.info/demo/shared/cookie-consent.css">
+<script src="https://testscript.info/demo/shared/cookie-consent.js" defer></script>
 <script src="<?php echo e(asset_url('assets/js/app.js')); ?>" defer></script>
 </body>
 
