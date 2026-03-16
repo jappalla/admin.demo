@@ -17,11 +17,17 @@ final class Session
         $isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
             || (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443);
 
+        $host = (string) ($_SERVER['HTTP_HOST'] ?? '');
+        $cookieDomain = str_ends_with($host, '.testscript.info') || $host === 'testscript.info'
+            ? '.testscript.info'
+            : '';
+
         session_name('cv_admin_session');
         session_start([
             'cookie_httponly' => true,
             'cookie_secure' => $isHttps,
             'cookie_samesite' => 'Lax',
+            'cookie_domain' => $cookieDomain,
             'use_strict_mode' => true,
         ]);
     }

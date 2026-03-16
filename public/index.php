@@ -139,6 +139,12 @@ $routes = [
     'POST admin/settings/update' => static function () use ($adminController): void {
         $adminController->updateProfileContacts();
     },
+    'POST admin/message/read' => static function () use ($adminController): void {
+        $adminController->markMessageRead();
+    },
+    'POST admin/message/delete' => static function () use ($adminController): void {
+        $adminController->deleteMessage();
+    },
     'GET admin/api/experiences' => static function () use ($adminController): void {
         $adminController->apiExperiences();
     },

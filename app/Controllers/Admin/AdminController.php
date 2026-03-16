@@ -57,7 +57,12 @@ final class AdminController
         $experiences = $this->content->listExperiences();
         $skills = $this->content->listSkills();
         $settings = $this->content->profileContactSettings();
-        $messages = $this->content->listContactMessages(30);
+
+        $msgPage = max(1, (int) ($_GET['msg_page'] ?? 1));
+        $msgPerPage = 10;
+        $messages = $this->content->paginatedMessages($msgPage, $msgPerPage);
+        $msgTotal = $this->content->countMessages();
+        $msgTotalPages = max(1, (int) ceil($msgTotal / $msgPerPage));
 
         require BASE_PATH . '/partials/header.php';
         render('admin/dashboard', [
@@ -68,6 +73,9 @@ final class AdminController
             'skills' => $skills,
             'settings' => $settings,
             'messages' => $messages,
+            'msgPage' => $msgPage,
+            'msgTotalPages' => $msgTotalPages,
+            'msgTotal' => $msgTotal,
         ]);
         require BASE_PATH . '/partials/footer.php';
     }
@@ -395,6 +403,50 @@ final class AdminController
             'ok' => true,
             'data' => $this->content->listContactMessages(100),
         ]);
+    }
+
+    public function markMessageRead(): void
+    {
+        $this->requireAuthenticatedUser();
+        $this->assertValidCsrf();
+
+        $id = (int) ($_POST['id'] ?? 0);
+
+        try {
+            $updated = $this->content->markMessageAsRead($id);
+            if ($updated) {
+                Csrf::regenerate();
+                flash('success', 'Messaggio segnato come letto.');
+            } else {
+                flash('error', 'Messaggio non trovato.');
+            }
+        } catch (Throwable $exception) {
+            flash('error', $this->buildErrorMessage('Operazione fallita.', $exception));
+        }
+
+        redirect_to('admin/panel');
+    }
+
+    public function deleteMessage(): void
+    {
+        $this->requireAuthenticatedUser();
+        $this->assertValidCsrf();
+
+        $id = (int) ($_POST['id'] ?? 0);
+
+        try {
+            $deleted = $this->content->deleteMessage($id);
+            if ($deleted) {
+                Csrf::regenerate();
+                flash('success', 'Messaggio eliminato.');
+            } else {
+                flash('error', 'Messaggio non trovato.');
+            }
+        } catch (Throwable $exception) {
+            flash('error', $this->buildErrorMessage('Eliminazione messaggio fallita.', $exception));
+        }
+
+        redirect_to('admin/panel');
     }
 
     private function requireAuthenticatedUser(): array

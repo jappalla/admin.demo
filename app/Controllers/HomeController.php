@@ -49,6 +49,9 @@ final class HomeController
         $contactSuccess = flash('contact_success');
         $contactError = flash('contact_error');
 
+        $projects = require BASE_PATH . '/config/projects.php';
+        $totalTests = $this->calculateTotalTests();
+
         require BASE_PATH . '/partials/header.php';
         render('home', [
             'experiences' => $experiences,
@@ -58,6 +61,8 @@ final class HomeController
             'contactIntroHtml' => $contactIntroHtml,
             'contactSuccess' => $contactSuccess,
             'contactError' => $contactError,
+            'projects' => $projects,
+            'totalTests' => $totalTests,
         ]);
         require BASE_PATH . '/partials/footer.php';
     }
@@ -269,5 +274,12 @@ final class HomeController
         }
 
         return '';
+    }
+
+    private function calculateTotalTests(): int
+    {
+        // App (231) + Dashboard (333) + API (63) = 627
+        // Derived from test suites; update config/projects.php metrics if counts change.
+        return 627;
     }
 }

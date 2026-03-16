@@ -147,6 +147,26 @@ final class AdminContentService
         return $this->messages->latest($limit);
     }
 
+    public function paginatedMessages(int $page, int $perPage = 10): array
+    {
+        return $this->messages->paginated($page, $perPage);
+    }
+
+    public function countMessages(): int
+    {
+        return $this->messages->count();
+    }
+
+    public function markMessageAsRead(int $id): bool
+    {
+        return $this->messages->updateStatus($id, 'read');
+    }
+
+    public function deleteMessage(int $id): bool
+    {
+        return $this->messages->delete($id);
+    }
+
     public function createContactMessage(array $input): int
     {
         $fullName = Validator::requiredString((string) ($input['full_name'] ?? ''), 'full_name', 120);

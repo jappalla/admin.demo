@@ -13,9 +13,9 @@ $contactIntro = (string) ($settings['contact_intro'] ?? '');
 $contactIntroHtml = isset($contactIntroHtml) && is_string($contactIntroHtml) ? $contactIntroHtml : '';
 
 $yearsExperience = max(1, (int) date('Y') - 2012);
-$totalProjects = 16;
+$totalProjects = count($projects);
 $totalTechnologies = count($skills);
-$totalTests = 548;
+// $totalTests passed from controller
 
 $personSchema = [
     '@context' => 'https://schema.org',
@@ -38,63 +38,6 @@ foreach ($skills as $skill) {
     if ($cat === '') $cat = 'Altro';
     $skillCategories[$cat][] = $skill;
 }
-
-$projects = [
-    [
-        'name' => 'testscript.info',
-        'description' => 'Piattaforma full-stack con blog multilingua, 16 demo interattive, dashboard admin e REST API con 44 endpoints.',
-        'tech' => ['React 19', 'TypeScript', 'PHP 8', 'Slim 4', 'MySQL', 'TailwindCSS'],
-        'url'  => 'https://testscript.info/app',
-        'github' => 'https://github.com/jappalla/testscript.info',
-        'metrics' => ['548 test', 'Lighthouse 95+', '6 lingue'],
-        'color' => 'accent-blue',
-    ],
-    [
-        'name' => 'Developer CV Portal',
-        'description' => 'Curriculum vitae dinamico con MVC custom, admin dashboard, PDF export, sistema messaggistica istantanea.',
-        'tech' => ['PHP 8', 'TailwindCSS v4', 'MySQL', 'JWT Auth', 'PDF Generator'],
-        'url'  => 'https://developer.testscript.info',
-        'github' => 'https://github.com/jappalla/admin.demo',
-        'metrics' => ['Custom MVC', 'Zero deps PDF', 'CRUD completo'],
-        'color' => 'accent-violet',
-    ],
-    [
-        'name' => 'REST API Enterprise',
-        'description' => 'API backend con Slim 4, JWT authentication, rate limiting, CORS dinamico, logging strutturato e 44 endpoints documentati.',
-        'tech' => ['Slim 4', 'PHP-DI', 'Firebase JWT', 'Monolog', 'PDO/MySQL'],
-        'url'  => 'https://testscript.info/API/health',
-        'github' => 'https://github.com/jappalla/testscript.info',
-        'metrics' => ['44 endpoints', '39 test PHPUnit', '82 assertions'],
-        'color' => 'emerald',
-    ],
-    [
-        'name' => 'Interactive Demo Hub',
-        'description' => '16+ playground interattivi: Python (Pyodide), SQL (WASM), Regex, Algorithm Visualizer, CSS Grid Builder e altro.',
-        'tech' => ['JavaScript', 'WebAssembly', 'Canvas API', 'Pyodide', 'SQLite'],
-        'url'  => 'https://testscript.info/demo',
-        'github' => 'https://github.com/jappalla/testscript.info',
-        'metrics' => ['16 demo live', 'Zero backend', 'Full interactive'],
-        'color' => 'sky',
-    ],
-    [
-        'name' => 'Admin Dashboard',
-        'description' => 'Pannello amministrativo React con CRUD completo per post, demo, categorie, tag, contatti e statistiche aggregate.',
-        'tech' => ['React', 'TypeScript', 'react-hook-form', 'Zod', 'TanStack Query'],
-        'url'  => 'https://testscript.info/dashboard',
-        'github' => 'https://github.com/jappalla/testscript.info',
-        'metrics' => ['190 test', '63% coverage', 'JWT protected'],
-        'color' => 'fuchsia',
-    ],
-    [
-        'name' => 'E2E Testing Suite',
-        'description' => 'Suite di test end-to-end con Playwright: 96 test su 3 dispositivi (Desktop, Mobile, Tablet) con screenshot on failure.',
-        'tech' => ['Playwright', 'TypeScript', 'CI/CD Ready'],
-        'url'  => 'https://testscript.info/app',
-        'github' => 'https://github.com/jappalla/testscript.info',
-        'metrics' => ['96 test E2E', '3 dispositivi', 'Cross-browser'],
-        'color' => 'amber',
-    ],
-];
 
 $colorMap = [
     'accent-blue'   => ['border' => 'border-blue-400/20',  'bg' => 'bg-blue-400/10',  'text' => 'text-blue-300',  'ring' => 'ring-blue-400/20'],

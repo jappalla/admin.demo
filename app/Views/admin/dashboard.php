@@ -63,8 +63,9 @@
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                 </svg>
                 Messaggi
-                <?php if (count($messages) > 0): ?>
-                    <span class="sidebar-badge"><?php echo count($messages); ?></span>
+                <?php $totalMsgCount = (int) ($msgTotal ?? count($messages));
+                if ($totalMsgCount > 0): ?>
+                    <span class="sidebar-badge"><?php echo $totalMsgCount; ?></span>
                 <?php endif; ?>
             </button>
 
@@ -159,7 +160,7 @@
                         </svg>
                     </span>
                     <div>
-                        <p class="stat-value"><?php echo count($messages); ?></p>
+                        <p class="stat-value"><?php echo (int) ($msgTotal ?? count($messages)); ?></p>
                         <p class="stat-label">Messaggi</p>
                     </div>
                 </div>
@@ -428,6 +429,7 @@
                 <div class="mb-4 flex items-center gap-3">
                     <span class="inline-flex rounded-full border border-violet-300/20 bg-violet-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-violet-200">Inbox</span>
                     <h2 class="m-0 text-2xl font-bold text-white">Messaggi istantanei ricevuti</h2>
+                    <span class="ml-auto text-sm text-white/50"><?php echo (int) ($msgTotal ?? 0); ?> totali</span>
                 </div>
                 <div class="table-wrap rounded-2xl border border-white/10 bg-base-950/60 p-2">
                     <table class="admin-table">
@@ -440,28 +442,61 @@
                                 <th>Messaggio</th>
                                 <th>Stato</th>
                                 <th>Data</th>
+                                <th>Azione</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if ($messages === []): ?>
                                 <tr>
-                                    <td colspan="7">Nessun messaggio ricevuto.</td>
+                                    <td colspan="8">Nessun messaggio ricevuto.</td>
                                 </tr>
                             <?php endif; ?>
                             <?php foreach ($messages as $message): ?>
-                                <tr>
+                                <tr class="<?php echo ($message['status'] ?? '') === 'new' ? 'bg-violet-400/5' : ''; ?>">
                                     <td><?php echo e((string) $message['id']); ?></td>
                                     <td><?php echo e((string) $message['full_name']); ?></td>
                                     <td><?php echo e((string) $message['email']); ?></td>
                                     <td><?php echo e((string) ($message['subject'] ?? '')); ?></td>
-                                    <td><?php echo e((string) $message['message']); ?></td>
-                                    <td><?php echo e((string) $message['status']); ?></td>
-                                    <td><?php echo e((string) $message['created_at']); ?></td>
+                                    <td class="max-w-xs truncate" title="<?php echo e((string) $message['message']); ?>"><?php echo e((string) $message['message']); ?></td>
+                                    <td>
+                                        <?php if (($message['status'] ?? '') === 'new'): ?>
+                                            <span class="inline-flex rounded-full bg-amber-400/15 px-2 py-0.5 text-xs font-medium text-amber-300">Nuovo</span>
+                                        <?php else: ?>
+                                            <span class="inline-flex rounded-full bg-emerald-400/15 px-2 py-0.5 text-xs font-medium text-emerald-300">Letto</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td class="whitespace-nowrap"><?php echo e((string) $message['created_at']); ?></td>
+                                    <td class="actions-cell">
+                                        <?php if (($message['status'] ?? '') === 'new'): ?>
+                                            <form method="post" action="<?php echo e(route_url('admin/message/read')); ?>" class="inline-form">
+                                                <?php echo csrf_field(); ?>
+                                                <input type="hidden" name="id" value="<?php echo e((string) $message['id']); ?>">
+                                                <button class="button secondary" type="submit" title="Segna come letto">&#10003;</button>
+                                            </form>
+                                        <?php endif; ?>
+                                        <form method="post" action="<?php echo e(route_url('admin/message/delete')); ?>" data-confirm="Confermi eliminazione messaggio?" class="inline-form">
+                                            <?php echo csrf_field(); ?>
+                                            <input type="hidden" name="id" value="<?php echo e((string) $message['id']); ?>">
+                                            <button class="button danger" type="submit" title="Elimina">&#10005;</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
+
+                <?php if (($msgTotalPages ?? 1) > 1): ?>
+                    <nav class="mt-4 flex items-center justify-center gap-2">
+                        <?php if (($msgPage ?? 1) > 1): ?>
+                            <a href="<?php echo e(route_url('admin/panel') . '?msg_page=' . (($msgPage ?? 1) - 1)); ?>" class="button secondary px-3 py-1 text-sm" onclick="setTimeout(function(){switchTab('messages')},50)">&laquo; Prec</a>
+                        <?php endif; ?>
+                        <span class="text-sm text-white/60">Pagina <?php echo (int) ($msgPage ?? 1); ?> di <?php echo (int) ($msgTotalPages ?? 1); ?></span>
+                        <?php if (($msgPage ?? 1) < ($msgTotalPages ?? 1)): ?>
+                            <a href="<?php echo e(route_url('admin/panel') . '?msg_page=' . (($msgPage ?? 1) + 1)); ?>" class="button secondary px-3 py-1 text-sm" onclick="setTimeout(function(){switchTab('messages')},50)">Succ &raquo;</a>
+                        <?php endif; ?>
+                    </nav>
+                <?php endif; ?>
             </section>
         </div>
 
@@ -496,6 +531,11 @@
                         if (!confirm(f.getAttribute('data-confirm'))) e.preventDefault();
                     });
                 });
+                // Auto-switch to messages tab when msg_page param is present
+                var params = new URLSearchParams(window.location.search);
+                if (params.has('msg_page')) {
+                    switchTab('messages');
+                }
             });
         </script>
     </main>

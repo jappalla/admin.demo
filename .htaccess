@@ -15,6 +15,11 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^(vendor|config|database|storage|app)/ - [F,L]
+
+  # Front controller: route all non-file requests to index.php
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)$ index.php [QSA,L]
 </IfModule>
 
 # === Cache headers ===
